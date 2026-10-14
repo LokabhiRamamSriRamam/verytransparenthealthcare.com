@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="A patient checking her records on the patient portal">
+  <title>A patient checking her records on the patient portal</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+
+    
+    <rect x="61" y="110" width="8.5" height="52" rx="3" fill="#1F30A0"/>
+    <rect x="70.5" y="110" width="8.5" height="52" rx="3" fill="#1F30A0"/>
+    <ellipse cx="64" cy="163.5" rx="7.5" ry="3.3" fill="#191919"/>
+    <ellipse cx="77" cy="163.5" rx="7.5" ry="3.3" fill="#191919"/>
+    <path d="M57 42 C 54 58, 56 68, 61 71 L 79 71 C 84 68, 86 58, 83 42 Z" fill="#231710"/>
+    <rect x="66.5" y="52" width="7" height="10" fill="#C68642"/>
+    <path d="M57 68 L 53 100" stroke="#F08A6C" stroke-width="7.5" stroke-linecap="round"/>
+    <circle cx="52.5" cy="103" r="3.6" fill="#C68642"/>
+    <path d="M55 74 q0 -14 15 -14 q15 0 15 14 v42 h-30z" fill="#F08A6C"/>
+    <path d="M83 68 L 86 88 L 97 84" stroke="#F08A6C" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="100" cy="83" r="3.6" fill="#C68642"/>
+    <circle cx="70" cy="44" r="11.5" fill="#C68642"/>
+    <path d="M58.5 46 C 57 30, 83 30, 81.5 46 C 77 38, 65 37, 58.5 46 Z" fill="#231710"/>
+    <rect x="96" y="70" width="16" height="26" rx="3" fill="#191919"/>
+    <path d="M112 76 C 124 64, 128 58, 134 52" stroke="#914BFA" stroke-width="2.5" stroke-dasharray="3 6" stroke-linecap="round" fill="none"/>
+    <rect x="132" y="22" width="88" height="124" rx="12" fill="#FFFFFF"/>
+    <rect x="132" y="22" width="88" height="26" rx="12" fill="#5C3FD0"/><rect x="132" y="36" width="88" height="12" fill="#5C3FD0"/>
+    <path transform="translate(150 38) scale(0.55)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#FFFFFF"/>
+    <rect x="164" y="31" width="40" height="5" rx="2.5" fill="#D8C8FF"/>
+    <circle cx="146" cy="66" r="5" fill="#4CAF6E"/><rect x="156" y="63" width="50" height="6" rx="3" fill="#191919"/>
+    <circle cx="146" cy="84" r="5" fill="#F08A6C"/><rect x="156" y="81" width="40" height="6" rx="3" fill="#191919"/>
+    <path d="M142 128 L156 114 L168 120 L186 100 L206 106" stroke="#5C3FD0" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path transform="translate(222 160) scale(0.8)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+    
+  </g>
+</svg>

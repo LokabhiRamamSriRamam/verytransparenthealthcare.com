@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="A clipboard with a heart and a heartbeat line">
+  <title>A clipboard with a heart and a heartbeat line</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+
+    <rect x="64" y="26" width="112" height="136" rx="10" fill="#F4F1EC"/>
+    <rect x="96" y="16" width="48" height="20" rx="6" fill="#5C3FD0"/>
+    <path transform="translate(120 76) scale(1.5)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#F08A6C"/>
+    <path d="M78 112 H100 L108 98 L118 128 L128 104 L134 112 H162" stroke="#5C3FD0" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="80" y="138" width="80" height="7" rx="3.5" fill="#BFB1A6"/>
+    <circle cx="186" cy="136" r="20" fill="#4CAF6E"/><path d="M177.6 136.4 l6 6 l11 -12" stroke="#FFFFFF" stroke-width="4.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path transform="translate(44 52) scale(1.1)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+  </g>
+</svg>

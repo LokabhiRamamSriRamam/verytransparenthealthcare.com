@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="Mental health">
+  <title>Mental health</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+<circle cx="48" cy="48" r="44" fill="#EEE5FF"/><path d="M22 28 h52 a8 8 0 0 1 8 8 v24 a8 8 0 0 1 -8 8 h-30 l-12 10 l2 -10 h-12 a8 8 0 0 1 -8 -8 v-24 a8 8 0 0 1 8 -8 z" fill="#5C3FD0"/><path transform="translate(48 50) scale(0.95)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#FFFFFF"/>
+  </g>
+</svg>

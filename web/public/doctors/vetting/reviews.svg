@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="Five-star patient feedback on a card, with a rising chart">
+  <title>Five-star patient feedback on a card, with a rising chart</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+
+    <rect x="30" y="40" width="150" height="96" rx="14" fill="#FFFFFF"/>
+    <circle cx="56" cy="66" r="12" fill="#C68642"/>
+    <path d="M44.5 68 C 43 52, 69 52, 67.5 68 C 63 60, 51 59, 44.5 68 Z" fill="#231710"/>
+    <path d="M76 60 h60 M76 72 h40" stroke="#DCD3CB" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="48.0,99.0 50.4,104.7 56.6,105.2 51.9,109.3 53.3,115.3 48.0,112.0 42.7,115.3 44.1,109.3 39.4,105.2 45.6,104.7" fill="#5C3FD0" stroke="#5C3FD0" stroke-width="1.6" stroke-linejoin="round"/><polygon points="72.0,99.0 74.4,104.7 80.6,105.2 75.9,109.3 77.3,115.3 72.0,112.0 66.7,115.3 68.1,109.3 63.4,105.2 69.6,104.7" fill="#5C3FD0" stroke="#5C3FD0" stroke-width="1.6" stroke-linejoin="round"/><polygon points="96.0,99.0 98.4,104.7 104.6,105.2 99.9,109.3 101.3,115.3 96.0,112.0 90.7,115.3 92.1,109.3 87.4,105.2 93.6,104.7" fill="#5C3FD0" stroke="#5C3FD0" stroke-width="1.6" stroke-linejoin="round"/><polygon points="120.0,99.0 122.4,104.7 128.6,105.2 123.9,109.3 125.3,115.3 120.0,112.0 114.7,115.3 116.1,109.3 111.4,105.2 117.6,104.7" fill="#5C3FD0" stroke="#5C3FD0" stroke-width="1.6" stroke-linejoin="round"/><polygon points="144.0,99.0 146.4,104.7 152.6,105.2 147.9,109.3 149.3,115.3 144.0,112.0 138.7,115.3 140.1,109.3 135.4,105.2 141.6,104.7" fill="#914BFA" stroke="#914BFA" stroke-width="1.6" stroke-linejoin="round"/>
+    <rect x="156" y="98" width="62" height="60" rx="10" fill="#EEE5FF"/>
+    <path d="M166 146 L180 130 L192 136 L208 112" stroke="#4CAF6E" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M198 112 h10 v10" stroke="#4CAF6E" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path transform="translate(196 38) scale(1)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#F08A6C"/>
+    <path transform="translate(24 150) scale(0.8)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+    
+  </g>
+</svg>

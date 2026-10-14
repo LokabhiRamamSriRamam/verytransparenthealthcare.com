@@ -1,0 +1,53 @@
+/* ============ Palette & tokens ============ */
+:root {
+  --purple: #5C3FD0;          /* brand primary */
+  --purple-light: #914BFA;
+  --purple-deep: #4B3FD0;
+  --indigo: #1F30A0;
+  --ink: #191919;             /* text */
+  --ink-2: #2F2F2F;
+  --ink-3: #4F4F4F;
+  --cream: #F8F6F2;           /* page background */
+  --white: #FFFFFF;
+  --lavender: #F6F1FF;
+  --lavender-2: #EEE5FF;
+
+  --font-sans: var(--font-manrope), "Segoe UI", Arial, sans-serif;
+  --font-display: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a { color: inherit; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

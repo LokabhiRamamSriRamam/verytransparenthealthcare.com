@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" width="1200" height="860" role="img" aria-label="Tablet frame">
+  <title>Tablet frame</title>
+  <!-- Screen opening: x=26 y=26 width=1148 height=808 radius=24. Place content underneath. -->
+  <path fill-rule="evenodd" fill="#191919" d="M50 0 H1150 a50 50 0 0 1 50 50 V810 a50 50 0 0 1 -50 50 H50 a50 50 0 0 1 -50 -50 V50 a50 50 0 0 1 50 -50 Z M50 26 a24 24 0 0 0 -24 24 V810 a24 24 0 0 0 24 24 H1150 a24 24 0 0 0 24 -24 V50 a24 24 0 0 0 -24 -24 Z"/>
+  <rect x="1.5" y="1.5" width="1197" height="857" rx="48.5" fill="none" stroke="#3A3A44" stroke-width="2"/>
+  <circle cx="600" cy="13" r="3.5" fill="#34343D"/>
+</svg>

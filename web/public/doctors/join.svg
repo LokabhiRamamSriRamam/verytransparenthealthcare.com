@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="A doctor writing on a tablet as notes turn into tidy records">
+  <title>A doctor writing on a tablet as notes turn into tidy records</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+
+    <circle cx="86" cy="96" r="70" fill="#EEE5FF"/>
+    
+    <rect x="61" y="110" width="8.5" height="52" rx="3" fill="#2F2F2F"/>
+    <rect x="70.5" y="110" width="8.5" height="52" rx="3" fill="#2F2F2F"/>
+    <ellipse cx="64" cy="163.5" rx="7.5" ry="3.3" fill="#191919"/>
+    <ellipse cx="77" cy="163.5" rx="7.5" ry="3.3" fill="#191919"/>
+    
+    <rect x="66.5" y="52" width="7" height="10" fill="#8D5524"/>
+    <path d="M57 68 L 53 100" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round"/>
+    <circle cx="52.5" cy="103" r="3.6" fill="#8D5524"/>
+    <path d="M54 74 q0 -14 16 -14 q16 0 16 14 v44 h-32z" fill="#FFFFFF"/><path d="M65 61 h10 l-2 30 h-6z" fill="#1F30A0"/>
+    <path d="M83 68 L 86 88 L 97 84" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="100" cy="83" r="3.6" fill="#8D5524"/>
+    <circle cx="70" cy="44" r="11.5" fill="#8D5524"/>
+    <path d="M58.5 46 C 57 30, 83 30, 81.5 46 C 77 38, 65 37, 58.5 46 Z" fill="#231710"/>
+    
+    <path d="M64 61 C 60 76, 61 86, 67 90 M76 61 C 80 74, 78 84, 72 92" stroke="#191919" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <circle cx="72" cy="94" r="3.4" fill="#191919"/>
+    <g transform="rotate(-10 106 82)">
+      <rect x="92" y="64" width="34" height="44" rx="4" fill="#191919"/>
+      <rect x="95" y="67" width="28" height="38" rx="2" fill="#FFFFFF"/>
+      <path d="M99 76 c3 -3 5 3 8 0 s5 3 8 0 M99 86 c3 -3 5 3 8 0 s4 3 6 0" stroke="#5C3FD0" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    </g>
+    <path d="M132 84 C 146 80, 150 64, 160 60" stroke="#914BFA" stroke-width="2.5" stroke-dasharray="3 6" fill="none" stroke-linecap="round"/>
+    <rect x="156" y="36" width="66" height="22" rx="7" fill="#FFFFFF"/>
+    <circle cx="168" cy="47" r="6" fill="#4CAF6E"/><path d="M178 47 h36" stroke="#DCD3CB" stroke-width="4" stroke-linecap="round"/>
+    <rect x="156" y="66" width="66" height="22" rx="7" fill="#FFFFFF"/>
+    <circle cx="168" cy="77" r="6" fill="#5C3FD0"/><path d="M178 77 h28" stroke="#DCD3CB" stroke-width="4" stroke-linecap="round"/>
+    <rect x="156" y="96" width="66" height="22" rx="7" fill="#FFFFFF"/>
+    <circle cx="168" cy="107" r="6" fill="#F08A6C"/><path d="M178 107 h32" stroke="#DCD3CB" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="200" cy="146" r="18" fill="#5C3FD0"/>
+    <path d="M200 137 v18 M191 146 h18" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+    <rect x="20" y="162" width="130" height="5" rx="2.5" fill="#BFB1A6"/>
+    <path transform="translate(140 24) scale(0.9)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+  
+  </g>
+</svg>

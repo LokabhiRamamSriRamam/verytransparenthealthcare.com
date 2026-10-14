@@ -1,0 +1,294 @@
+/* ============ Floating bar ============ */
+.wrap {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 16px 24px 0;
+}
+
+.bar {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: rgba(236, 234, 231, 0.82);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  backdrop-filter: saturate(160%) blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(25, 25, 25, 0.04), 0 10px 28px -18px rgba(25, 25, 25, 0.25);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  height: 68px;
+  padding: 0 14px 0 24px;
+}
+
+.brand {
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* ============ Desktop links ============ */
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item { position: relative; }
+
+.link,
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #727272;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+.link:hover,
+.trigger:hover,
+.trigger[aria-expanded="true"] {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.chev { transition: transform 0.2s ease; }
+[aria-expanded="true"] > .chev { transform: rotate(180deg); }
+
+/* ============ Dropdown ============ */
+.menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  min-width: 230px;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 0 0 1px rgba(25, 25, 25, 0.05), 0 20px 44px -20px rgba(25, 25, 25, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -6px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
+}
+/* invisible bridge so the menu stays open while the pointer crosses the gap */
+.menu::before {
+  content: "";
+  position: absolute;
+  inset: -16px 0 auto;
+  height: 16px;
+}
+.menu[data-open="true"] {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.menuLink {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink-2);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.menuLink:hover {
+  background: var(--lavender);
+  color: var(--purple);
+}
+
+/* ============ Right-side actions ============ */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.login {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+.login:hover { color: var(--purple); }
+
+.doctors {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 18px;
+  border-radius: 10px;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+.doctors:hover { background: var(--purple); }
+
+/* ============ Hamburger ============ */
+.burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  cursor: pointer;
+  place-items: center;
+}
+.burger:hover { background: rgba(255, 255, 255, 0.6); }
+.burger span,
+.burger span::before,
+.burger span::after {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--ink);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.burger span { position: relative; }
+.burger span::before,
+.burger span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.burger span::before { top: -6px; }
+.burger span::after { top: 6px; }
+.burger span[data-open="true"] { background: transparent; }
+.burger span[data-open="true"]::before { transform: translateY(6px) rotate(45deg); }
+.burger span[data-open="true"]::after { transform: translateY(-6px) rotate(-45deg); }
+
+/* ============ Mobile menu ============ */
+.mobile { display: none; }
+
+.mobileList {
+  list-style: none;
+  margin: 0;
+  padding: 4px 8px 8px;
+}
+
+.mobileLink,
+.mobileTrigger {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 12px;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.mobileLink:hover,
+.mobileTrigger:hover { background: rgba(255, 255, 255, 0.6); }
+
+.mobileSub {
+  list-style: none;
+  margin: 0 0 6px;
+  padding: 0 0 0 12px;
+  display: none;
+}
+.mobileSub[data-open="true"] { display: block; }
+
+.mobileSubLink {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: var(--ink-3);
+  text-decoration: none;
+}
+.mobileSubLink:hover { color: var(--purple); background: var(--lavender); }
+
+.mobileActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 12px 16px 16px;
+  border-top: 1px solid rgba(25, 25, 25, 0.08);
+}
+
+.mobileLogin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--ink);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* ============ Focus ============ */
+.brand:focus-visible,
+.link:focus-visible,
+.trigger:focus-visible,
+.menuLink:focus-visible,
+.login:focus-visible,
+.doctors:focus-visible,
+.burger:focus-visible,
+.mobileLink:focus-visible,
+.mobileTrigger:focus-visible,
+.mobileSubLink:focus-visible,
+.mobileLogin:focus-visible {
+  outline: 3px solid var(--purple-light);
+  outline-offset: 2px;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 1080px) {
+  .nav,
+  .actions { display: none; }
+  .burger { display: grid; }
+  .row { grid-template-columns: 1fr auto; }
+  .mobile[data-open="true"] { display: block; }
+}
+
+@media (max-width: 760px) {
+  .wrap { padding: 12px 16px 0; }
+  .row { height: 60px; padding: 0 8px 0 16px; }
+}
+
+@media (max-width: 380px) {
+  .mobileActions { grid-template-columns: 1fr; }
+}

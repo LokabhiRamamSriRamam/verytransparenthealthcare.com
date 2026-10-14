@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="A crescent moon and stars above a phone with a message and a thermometer">
+  <title>A crescent moon and stars above a phone with a message and a thermometer</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+
+    <path d="M78 28 a34 34 0 1 0 34 44 a28 28 0 1 1 -34 -44 Z" fill="#FFB59E"/>
+    <path transform="translate(128 32) scale(1)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#914BFA"/>
+    <path transform="translate(40 90) scale(0.8)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#914BFA"/>
+    <rect x="130" y="56" width="62" height="104" rx="12" fill="#191919"/>
+    <rect x="136" y="64" width="50" height="88" rx="7" fill="#FFFFFF"/>
+    <rect x="142" y="74" width="32" height="11" rx="5.5" fill="#EEE5FF"/>
+    <rect x="152" y="92" width="28" height="11" rx="5.5" fill="#5C3FD0"/>
+    <rect x="142" y="110" width="36" height="11" rx="5.5" fill="#EEE5FF"/>
+    <g transform="rotate(-20 90 128)">
+      <rect x="84" y="86" width="14" height="62" rx="7" fill="#F4F1EC"/>
+      <rect x="88" y="112" width="6" height="30" rx="3" fill="#F08A6C"/>
+      <circle cx="91" cy="148" r="10" fill="#F08A6C"/>
+    </g>
+  </g>
+</svg>

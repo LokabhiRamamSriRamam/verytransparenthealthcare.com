@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="A clock winding back, giving doctors time for patients">
+  <title>A clock winding back, giving doctors time for patients</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+
+    <path d="M40 92 A 72 72 0 1 1 72 150" stroke="#D8C8FF" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <path d="M26 82 L40 96 L54 80" stroke="#D8C8FF" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="120" cy="92" r="52" fill="#FFFFFF"/>
+    <circle cx="120" cy="92" r="52" fill="none" stroke="#5C3FD0" stroke-width="8"/>
+    <rect x="118" y="46" width="4" height="10" rx="2" fill="#BFB1A6" transform="rotate(0 120 92)"/><rect x="118" y="46" width="4" height="10" rx="2" fill="#BFB1A6" transform="rotate(90 120 92)"/><rect x="118" y="46" width="4" height="10" rx="2" fill="#BFB1A6" transform="rotate(180 120 92)"/><rect x="118" y="46" width="4" height="10" rx="2" fill="#BFB1A6" transform="rotate(270 120 92)"/>
+    <path d="M120 92 V64 M120 92 L140 104" stroke="#191919" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="120" cy="92" r="5" fill="#191919"/>
+    <path transform="translate(196 44) scale(1)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#F08A6C"/>
+    <path transform="translate(210 76) scale(0.55)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#FFB59E"/>
+    <path transform="translate(36 30) scale(1)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#914BFA"/>
+    
+  </g>
+</svg>

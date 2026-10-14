@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="A price tag with the rupee sign beside an itemised bill">
+  <title>A price tag with the rupee sign beside an itemised bill</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+
+    <path d="M44 24 H136 V150 l-8 -5 l-8 5 l-8 -5 l-8 5 l-8 -5 l-8 5 l-8 -5 l-8 5 l-8 -5 l-8 5 l-8 -5 l-8 5 z" fill="#F4F1EC"/>
+    <path d="M58 44 h40 M58 60 h52 M58 76 h36 M58 92 h48" stroke="#DCD3CB" stroke-width="4" stroke-linecap="round"/>
+    <path d="M112 44 h12 M118 60 h6 M112 76 h12 M116 92 h8" stroke="#BFB1A6" stroke-width="4" stroke-linecap="round"/>
+    <path d="M58 112 h66" stroke="#191919" stroke-width="2" stroke-dasharray="3 5" stroke-linecap="round"/>
+    <path d="M58 126 h26" stroke="#5C3FD0" stroke-width="5" stroke-linecap="round"/>
+    <path d="M108 126 h16" stroke="#5C3FD0" stroke-width="5" stroke-linecap="round"/>
+    <g transform="rotate(18 176 96)">
+      <path d="M150 58 H194 a6 6 0 0 1 6 6 V132 L172 152 L144 132 V64 a6 6 0 0 1 6 -6 Z" fill="#5C3FD0"/>
+      <circle cx="172" cy="72" r="6" fill="#F4F1EC"/>
+      <path d="M160 94 h24 M160 104 h24 M166 94 c14 0 14 20 0 20 l18 20" stroke="#FFFFFF" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <path d="M168 48 C 160 30, 176 22, 190 30" stroke="#191919" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path transform="translate(216 150) scale(0.9)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#4CAF6E"/>
+    
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="A phone showing a chat with a clinician">
+  <title>A phone showing a chat with a clinician</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+
+    <rect x="78" y="14" width="84" height="150" rx="16" fill="#191919"/>
+    <rect x="85" y="24" width="70" height="130" rx="9" fill="#FFFFFF"/>
+    <rect x="92" y="38" width="44" height="14" rx="7" fill="#EEE5FF"/>
+    <rect x="106" y="60" width="42" height="14" rx="7" fill="#5C3FD0"/>
+    <rect x="92" y="82" width="52" height="14" rx="7" fill="#EEE5FF"/>
+    <rect x="92" y="104" width="30" height="14" rx="7" fill="#EEE5FF"/>
+    <circle cx="100" cy="111" r="2.2" fill="#914BFA"/><circle cx="107" cy="111" r="2.2" fill="#914BFA"/><circle cx="114" cy="111" r="2.2" fill="#914BFA"/>
+    <circle cx="184" cy="128" r="20" fill="#4CAF6E"/><path d="M175.6 128.4 l6 6 l11 -12" stroke="#FFFFFF" stroke-width="4.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path transform="translate(52 50) scale(1.1)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+    <path transform="translate(56 120) scale(0.9)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#F08A6C"/>
+  </g>
+</svg>

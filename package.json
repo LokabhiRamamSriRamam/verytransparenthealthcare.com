@@ -1,0 +1,19 @@
+{
+  "name": "verytransparenthealthcare",
+  "private": true,
+  "workspaces": [
+    "web",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -n web,api -c magenta,cyan \"npm run dev -w web\" \"npm run dev -w server\"",
+    "dev:web": "npm run dev -w web",
+    "dev:server": "npm run dev -w server",
+    "build": "npm run build -w server && npm run build -w web",
+    "start": "concurrently -n web,api -c magenta,cyan \"npm run start -w web\" \"npm run start -w server\"",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w web"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}

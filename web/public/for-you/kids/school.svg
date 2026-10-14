@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="A school form with ticked boxes, a pencil and an apple">
+  <title>A school form with ticked boxes, a pencil and an apple</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+
+    <rect x="56" y="24" width="104" height="136" rx="10" fill="#F4F1EC"/>
+    <rect x="86" y="14" width="44" height="20" rx="6" fill="#5C3FD0"/>
+    <rect x="70" y="50" width="18" height="18" rx="4" fill="#FFFFFF"/><path d="M73 59 l4 4 l8 -9" stroke="#4CAF6E" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="96" y="55" width="50" height="8" rx="4" fill="#BFB1A6"/><rect x="70" y="80" width="18" height="18" rx="4" fill="#FFFFFF"/><path d="M73 89 l4 4 l8 -9" stroke="#4CAF6E" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="96" y="85" width="42" height="8" rx="4" fill="#BFB1A6"/><rect x="70" y="110" width="18" height="18" rx="4" fill="#FFFFFF"/><path d="M73 119 l4 4 l8 -9" stroke="#4CAF6E" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="96" y="115" width="34" height="8" rx="4" fill="#BFB1A6"/>
+    <g transform="rotate(35 176 80)">
+      <rect x="170" y="36" width="14" height="80" rx="3" fill="#FFB59E"/>
+      <path d="M170 116 H184 L177 132 Z" fill="#F4F1EC"/>
+      <path d="M174.5 126 H179.5 L177 132 Z" fill="#191919"/>
+      <rect x="170" y="30" width="14" height="10" rx="3" fill="#F08A6C"/>
+    </g>
+    <circle cx="192" cy="140" r="16" fill="#F08A6C"/>
+    <path d="M192 124 c0 -6 3 -9 7 -10" stroke="#4A2E1F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M194 122 c6 -6 12 -4 12 -4 c-2 6 -8 7 -12 4 Z" fill="#4CAF6E"/>
+  </g>
+</svg>

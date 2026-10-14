@@ -1,0 +1,101 @@
+.list {
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  --bg-1: #F6F1FF;
+  --bg-2: #EEE5FF;
+  --label: var(--purple);
+  --title: var(--ink);
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  text-decoration: none;
+  background: linear-gradient(165deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  box-shadow: 0 18px 40px -26px rgba(25, 25, 25, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 28px 50px -26px rgba(25, 25, 25, 0.5);
+}
+.card:focus-visible {
+  outline: 3px solid var(--purple-light);
+  outline-offset: 4px;
+}
+.card[data-theme="peach"] { --bg-1: #FFF7F4; --bg-2: #FFE2D6; --label: #B4492B; }
+.card[data-theme="mint"]  { --bg-1: #F3FFF8; --bg-2: #DDF3E6; --label: #2E7D32; }
+.card[data-theme="purple"] { --bg-1: #7B4BF0; --bg-2: #5C3FD0; --label: #E6DBFF; --title: #FFFFFF; }
+.card[data-theme="indigo"] { --bg-1: #4B3FD0; --bg-2: #1F30A0; --label: #D8C8FF; --title: #FFFFFF; }
+
+.imgWrap {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  transition: transform 0.4s ease;
+  transform-origin: 50% 100%;
+}
+.card:hover .imgWrap { transform: scale(1.05); }
+.img {
+  object-fit: contain;
+  object-position: 50% 100%;
+}
+.imgWrap[data-white-bg] .img { mix-blend-mode: multiply; }
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  padding: 18px 20px 20px;
+  background: rgba(255, 255, 255, 0.82);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+.title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.more {
+  margin-top: auto;
+  padding-top: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+.more span { display: inline-block; transition: transform 0.2s ease; }
+.card:hover .more span { transform: translateX(4px); }
+
+@media (max-width: 900px) {
+  .list {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: min(78vw, 320px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 4px 16px 24px;
+  }
+  .list::-webkit-scrollbar { display: none; }
+  .list > li { scroll-snap-align: start; }
+}

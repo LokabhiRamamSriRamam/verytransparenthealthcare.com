@@ -1,0 +1,199 @@
+.hero {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(16px, 3vh, 40px) 24px clamp(48px, 8vh, 96px);
+  text-align: center;
+  isolation: isolate;
+}
+
+/* soft lavender wash behind the whole hero */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -10% -30% auto;
+  height: 110%;
+  background: radial-gradient(60% 55% at 50% 45%, var(--lavender) 0%, rgba(246, 241, 255, 0) 70%);
+  z-index: -2;
+  pointer-events: none;
+}
+
+.title {
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(2rem, 4.6vw, 3.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.lineTop { display: block; }
+
+/* Same stacked composition on every screen: "with" above, "you" centred, "at the centre." below */
+.lineMid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  row-gap: 4px;
+}
+.sideRight { white-space: nowrap; }
+
+/* ============ The stage: "you" in the spotlight ============ */
+.stage {
+  --size: clamp(260px, min(84vw, 42vh), 420px); /* fit width on phones, height on desktops */
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  margin: 4px 0;
+  display: grid;
+  place-items: center;
+}
+
+/* light cone falling from above */
+.beam {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 70%;
+  height: 120%;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, rgba(145, 75, 250, 0) 0%, rgba(145, 75, 250, 0.1) 55%, rgba(255, 255, 255, 0.85) 100%);
+  clip-path: polygon(42% 0, 58% 0, 100% 100%, 0 100%);
+  filter: blur(6px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* bright pool of light where "you" stands */
+.halo {
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #FFFFFF 0%, #FFFFFF 38%, rgba(238, 229, 255, 0.9) 60%, rgba(238, 229, 255, 0) 72%);
+  box-shadow: 0 30px 80px -30px rgba(92, 63, 208, 0.45);
+  z-index: -1;
+}
+
+.petals {
+  position: absolute;
+  inset: 17%; /* keep petals inside the ring of words */
+  width: 66%;
+  height: 66%;
+  z-index: -1;
+  animation: breathe 9s ease-in-out infinite;
+}
+
+.orbit {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: spin 60s linear infinite;
+}
+.orbitLine {
+  fill: none;
+  stroke: var(--purple);
+  stroke-opacity: 0.18;
+  stroke-width: 1;
+  stroke-dasharray: 2 6;
+}
+.orbitText {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  fill: var(--purple);
+  fill-opacity: 0.75;
+}
+.orbitDot {
+  fill: var(--purple-light);
+  fill-opacity: 0.7;
+}
+
+.you {
+  position: relative;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: calc(var(--size) * 0.46);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  padding: 0 0.08em 0.08em; /* room for italic overhang and descender */
+  background: linear-gradient(135deg, var(--purple-light) 0%, var(--purple) 55%, var(--indigo) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 8px 18px rgba(92, 63, 208, 0.25));
+  transform: translateY(-0.04em);
+}
+
+/* ============ Subline & CTAs ============ */
+.subline {
+  max-width: 620px;
+  margin: clamp(4px, 1vh, 12px) auto 0;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  color: var(--ink-3);
+}
+
+.ctaRow {
+  margin-top: clamp(20px, 3vh, 28px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px 28px;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 30px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
+  color: var(--white);
+  box-shadow: 0 10px 24px -10px rgba(92, 63, 208, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px -12px rgba(92, 63, 208, 0.7);
+}
+
+.btnLink {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 8px 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.btnLink span { display: inline-block; transition: transform 0.2s ease; }
+.btnLink:hover { color: var(--purple); border-color: var(--purple); }
+.btnLink:hover span { transform: translateX(4px); }
+
+.btnPrimary:focus-visible,
+.btnLink:focus-visible {
+  outline: 3px solid var(--purple-light);
+  outline-offset: 3px;
+}
+
+/* ============ Motion ============ */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes breathe {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50%      { transform: scale(1.04) rotate(8deg); }
+}
+
+/* ============ Small screens: stack around "you" ============ */
+@media (max-width: 760px) {
+  .hero { padding-left: 16px; padding-right: 16px; }
+  .stage { --size: min(84vw, 340px); }
+  .orbitText { font-size: 14px; }
+  .subline { margin-top: 12px; }
+}

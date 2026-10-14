@@ -1,0 +1,15 @@
+/* Additions for the audience pages under /for-you/*.
+   Layout and theming come from the shared care styles; this only adds the illustrated tiles. */
+
+.artTile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.art {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: -4px auto 14px;
+}

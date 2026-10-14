@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="A calendar filling itself with booked appointments">
+  <title>A calendar filling itself with booked appointments</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+
+    <rect x="30" y="34" width="144" height="124" rx="12" fill="#FFFFFF"/>
+    <rect x="30" y="34" width="144" height="30" rx="12" fill="#5C3FD0"/><rect x="30" y="50" width="144" height="14" fill="#5C3FD0"/>
+    <rect x="56" y="24" width="8" height="20" rx="4" fill="#191919"/><rect x="140" y="24" width="8" height="20" rx="4" fill="#191919"/>
+    <rect x="42" y="74" width="24" height="20" rx="5" fill="#D8C8FF"/><rect x="74" y="74" width="24" height="20" rx="5" fill="#F4F1EC"/><rect x="106" y="74" width="24" height="20" rx="5" fill="#5C3FD0"/><rect x="138" y="74" width="24" height="20" rx="5" fill="#F4F1EC"/><rect x="42" y="101" width="24" height="20" rx="5" fill="#4CAF6E"/><rect x="74" y="101" width="24" height="20" rx="5" fill="#D8C8FF"/><rect x="106" y="101" width="24" height="20" rx="5" fill="#F4F1EC"/><rect x="138" y="101" width="24" height="20" rx="5" fill="#914BFA"/><rect x="42" y="128" width="24" height="20" rx="5" fill="#F4F1EC"/><rect x="74" y="128" width="24" height="20" rx="5" fill="#F08A6C"/><rect x="106" y="128" width="24" height="20" rx="5" fill="#D8C8FF"/><rect x="138" y="128" width="24" height="20" rx="5" fill="#F4F1EC"/>
+    <path d="M186 96 v-14 a16 16 0 0 1 32 0 v14 l5 6 h-42 z" fill="#FFB59E"/>
+    <circle cx="202" cy="110" r="5" fill="#191919"/>
+    <circle cx="218" cy="66" r="7" fill="#F08A6C"/>
+    <path transform="translate(206 144) scale(0.9)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#914BFA"/>
+    
+  </g>
+</svg>

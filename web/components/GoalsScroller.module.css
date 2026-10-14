@@ -1,0 +1,262 @@
+.section {
+  padding: clamp(56px, 9vh, 104px) 0 clamp(40px, 6vh, 72px);
+  scroll-margin-top: 96px;
+}
+
+/* ============ Intro ============ */
+.intro {
+  max-width: 880px;
+  margin: 0 auto clamp(32px, 5vh, 52px);
+  padding: 0 24px;
+  text-align: center;
+}
+
+.heading {
+  margin: 0;
+  font-size: clamp(1.9rem, 4vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.accent {
+  margin: 6px 0 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(2.2rem, 4.8vw, 3.9rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  padding-bottom: 0.08em;
+  text-wrap: balance;
+  background: linear-gradient(135deg, var(--purple-light) 0%, var(--purple) 55%, var(--indigo) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sub {
+  margin: 14px auto 0;
+  max-width: 560px;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  color: var(--ink-3);
+}
+
+/* ============ Track ============ */
+.track {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 48px, #000 calc(100% - 48px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 48px, #000 calc(100% - 48px), transparent 100%);
+}
+.track::-webkit-scrollbar { display: none; }
+
+.list {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  margin: 0;
+  padding: 12px 24px 28px;
+  list-style: none;
+}
+
+/* ============ Card ============ */
+.card {
+  /* theme defaults (lavender) */
+  --bg-1: #F6F1FF;
+  --bg-2: #EEE5FF;
+  --glow: rgba(145, 75, 250, 0.38);
+  --ring: rgba(92, 63, 208, 0.12);
+  --label: var(--purple);
+  --title: var(--ink);
+
+  position: relative;
+  display: block;
+  width: clamp(280px, 80vw, 400px);
+  height: clamp(420px, 60vh, 500px);
+  border-radius: 28px;
+  overflow: hidden;
+  isolation: isolate;
+  text-decoration: none;
+  background:
+    radial-gradient(120% 70% at 50% 0%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 60%),
+    linear-gradient(165deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 18px 40px -24px rgba(25, 25, 25, 0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 28px 50px -24px rgba(25, 25, 25, 0.45);
+}
+.card:focus-visible {
+  outline: 3px solid var(--purple-light);
+  outline-offset: 4px;
+}
+
+.card[data-theme="peach"] {
+  --bg-1: #FFF7F4;
+  --bg-2: #FFE2D6;
+  --glow: rgba(255, 150, 115, 0.45);
+  --ring: rgba(210, 110, 80, 0.13);
+  --label: #B4492B;
+}
+.card[data-theme="mint"] {
+  --bg-1: #F3FFF8;
+  --bg-2: #DDF3E6;
+  --glow: rgba(67, 160, 71, 0.32);
+  --ring: rgba(46, 125, 50, 0.12);
+  --label: #2E7D32;
+}
+.card[data-theme="purple"] {
+  --bg-1: #7B4BF0;
+  --bg-2: #5C3FD0;
+  --glow: rgba(255, 255, 255, 0.34);
+  --ring: rgba(255, 255, 255, 0.12);
+  --label: #E6DBFF;
+  --title: #FFFFFF;
+}
+.card[data-theme="indigo"] {
+  --bg-1: #4B3FD0;
+  --bg-2: #1F30A0;
+  --glow: rgba(145, 75, 250, 0.55);
+  --ring: rgba(255, 255, 255, 0.1);
+  --label: #D8C8FF;
+  --title: #FFFFFF;
+}
+
+/* concentric "stage" rings rising from behind the person */
+.rings {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: repeating-radial-gradient(circle at 50% 100%, transparent 0 42px, var(--ring) 42px 43px);
+  -webkit-mask-image: linear-gradient(to top, #000 0%, #000 45%, transparent 85%);
+  mask-image: linear-gradient(to top, #000 0%, #000 45%, transparent 85%);
+}
+
+/* soft light pooling behind the person */
+.glow {
+  position: absolute;
+  left: 50%;
+  bottom: -18%;
+  width: 115%;
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--glow) 0%, transparent 62%);
+  z-index: -1;
+  transition: transform 0.5s ease;
+}
+.card:hover .glow { transform: translateX(-50%) scale(1.08); }
+
+.text {
+  position: relative;
+  display: block;
+  padding: 26px 26px 0;
+}
+.label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+.title {
+  display: block;
+  margin-top: 8px;
+  max-width: 15ch;
+  font-size: clamp(1.4rem, 2vw, 1.65rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--title);
+}
+
+/* the cut-out person, anchored to the bottom and allowed to bleed at the sides */
+.imgWrap {
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  bottom: 0;
+  height: 66%;
+  transition: transform 0.5s ease;
+  transform-origin: 50% 100%;
+}
+.card:hover .imgWrap { transform: scale(1.04); }
+
+.img {
+  object-fit: contain;
+  object-position: 50% 100%;
+  filter: drop-shadow(0 18px 30px rgba(25, 25, 25, 0.18));
+  pointer-events: none;
+}
+
+/* image with a white background: blend it into the card */
+.imgWrap[data-white-bg] .img {
+  mix-blend-mode: multiply;
+  filter: none;
+}
+
+.cta {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px -8px rgba(25, 25, 25, 0.35);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.cta span { display: inline-block; transition: transform 0.2s ease; }
+.card:hover .cta span { transform: translateX(4px); }
+
+/* ============ Controls ============ */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+.ctrl {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(25, 25, 25, 0.12);
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.ctrl:hover {
+  background: var(--purple);
+  border-color: var(--purple);
+  color: var(--white);
+}
+.ctrl:focus-visible {
+  outline: 3px solid var(--purple-light);
+  outline-offset: 2px;
+}
+
+@media (max-width: 760px) {
+  .intro { padding: 0 16px; }
+  .list { padding-left: 16px; padding-right: 16px; gap: 14px; }
+  .track {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}

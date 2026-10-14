@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="Doctor and patient looking at the same record together">
+  <title>Doctor and patient looking at the same record together</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+
+    
+    <rect x="41" y="110" width="8.5" height="52" rx="3" fill="#1F30A0"/>
+    <rect x="50.5" y="110" width="8.5" height="52" rx="3" fill="#1F30A0"/>
+    <ellipse cx="44" cy="163.5" rx="7.5" ry="3.3" fill="#191919"/>
+    <ellipse cx="57" cy="163.5" rx="7.5" ry="3.3" fill="#191919"/>
+    
+    <rect x="46.5" y="52" width="7" height="10" fill="#8D5524"/>
+    <path d="M37 68 L 33 100" stroke="#E4E0F2" stroke-width="7.5" stroke-linecap="round"/>
+    <circle cx="32.5" cy="103" r="3.6" fill="#8D5524"/>
+    <path d="M34 74 q0 -14 16 -14 q16 0 16 14 v44 h-32z" fill="#E4E0F2"/><path d="M45 61 h10 l-2 30 h-6z" fill="#5C3FD0"/>
+    <path d="M63 68 L 72 82 L 84 74" stroke="#E4E0F2" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="87" cy="72" r="3.6" fill="#8D5524"/>
+    <circle cx="50" cy="44" r="11.5" fill="#8D5524"/>
+    <path d="M38.5 46 C 37 30, 63 30, 61.5 46 C 57 38, 45 37, 38.5 46 Z" fill="#231710"/>
+    <g transform="translate(380 0) scale(-1 1)">
+    <rect x="181" y="110" width="8.5" height="52" rx="3" fill="#2F2F2F"/>
+    <rect x="190.5" y="110" width="8.5" height="52" rx="3" fill="#2F2F2F"/>
+    <ellipse cx="184" cy="163.5" rx="7.5" ry="3.3" fill="#191919"/>
+    <ellipse cx="197" cy="163.5" rx="7.5" ry="3.3" fill="#191919"/>
+    
+    <rect x="186.5" y="52" width="7" height="10" fill="#E0AC69"/>
+    <path d="M177 68 L 173 100" stroke="#4CAF6E" stroke-width="7.5" stroke-linecap="round"/>
+    <circle cx="172.5" cy="103" r="3.6" fill="#E0AC69"/>
+    <path d="M175 74 q0 -14 15 -14 q15 0 15 14 v42 h-30z" fill="#4CAF6E"/>
+    <path d="M203 68 L 212 82 L 224 74" stroke="#4CAF6E" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="227" cy="72" r="3.6" fill="#E0AC69"/>
+    <circle cx="190" cy="44" r="11.5" fill="#E0AC69"/>
+    <circle cx="187" cy="31" r="5.5" fill="#231710"/><path d="M178.5 46 C 177 30, 203 30, 201.5 46 C 197 38, 185 37, 178.5 46 Z" fill="#231710"/></g>
+    <rect x="92" y="22" width="56" height="74" rx="8" fill="#FFFFFF"/>
+    <path transform="translate(120 42) scale(0.6)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#F08A6C"/>
+    <rect x="102" y="58" width="36" height="5" rx="2.5" fill="#191919"/>
+    <rect x="102" y="68" width="26" height="4" rx="2" fill="#BFB1A6"/>
+    <rect x="102" y="78" width="32" height="4" rx="2" fill="#BFB1A6"/>
+    <path transform="translate(120 110) scale(0.9)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#914BFA"/>
+    
+  </g>
+</svg>

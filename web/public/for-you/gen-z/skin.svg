@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="A skincare tube, a drop of serum and a round mirror">
+  <title>A skincare tube, a drop of serum and a round mirror</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+
+    <circle cx="150" cy="88" r="46" fill="#BFB1A6"/>
+    <circle cx="150" cy="88" r="38" fill="#EEE5FF"/>
+    <path d="M132 70 c6 -8 16 -10 24 -8" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <rect x="144" y="132" width="12" height="22" fill="#BFB1A6"/>
+    <g transform="rotate(-18 82 104)">
+      <path d="M62 64 H102 L98 138 H66 Z" fill="#F4F1EC"/>
+      <rect x="70" y="138" width="24" height="16" rx="3" fill="#5C3FD0"/>
+      <rect x="70" y="86" width="24" height="20" rx="4" fill="#D8C8FF"/>
+    </g>
+    <path d="M196 54 C 206 70, 208 78, 196 84 C 184 78, 186 70, 196 54 Z" fill="#F08A6C"/>
+    <path transform="translate(46 52) scale(1.1)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+    <rect x="30" y="154" width="180" height="6" rx="3" fill="#BFB1A6"/>
+  </g>
+</svg>

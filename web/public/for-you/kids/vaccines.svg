@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="A shield with a star, and a plaster">
+  <title>A shield with a star, and a plaster</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+
+    <path d="M120 22 L168 38 V84 C 168 118, 146 140, 120 152 C 94 140, 72 118, 72 84 V38 Z" fill="#5C3FD0"/>
+    <path transform="translate(120 86) scale(1.8)" d="M0 -14 L4 -5 L14 -4.5 L6.5 2 L9 12 L0 6.5 L-9 12 L-6.5 2 L-14 -4.5 L-4 -5 Z" fill="#FFFFFF"/>
+    <g transform="rotate(-30 194 130)">
+      <rect x="164" y="120" width="60" height="20" rx="10" fill="#FFB59E"/>
+      <rect x="184" y="120" width="20" height="20" fill="#F08A6C"/>
+    </g>
+    <path transform="translate(46 60) scale(1.2)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#4CAF6E"/>
+    <path transform="translate(196 40) scale(1)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+  </g>
+</svg>

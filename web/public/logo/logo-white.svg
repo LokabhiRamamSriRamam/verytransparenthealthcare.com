@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="300" height="64" role="img" aria-label="Very Transparent Healthcare">
+  <!-- Reversed version for dark (#191919) or purple backgrounds -->
+  <g fill="#FFFFFF" fill-opacity="0.32">
+    <circle cx="32" cy="17" r="15"/>
+    <circle cx="47" cy="32" r="15"/>
+    <circle cx="32" cy="47" r="15"/>
+    <circle cx="17" cy="32" r="15"/>
+  </g>
+  <circle cx="32" cy="32" r="8.5" fill="#FFFFFF" stroke="#914BFA" stroke-width="3"/>
+  <g font-family="Manrope, 'Segoe UI', Arial, sans-serif">
+    <text x="76" y="31" font-size="24" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">Very<tspan fill="#D8C8FF">Transparent</tspan></text>
+    <text x="77" y="50" font-size="11" font-weight="700" fill="#F8F6F2" letter-spacing="4.2">HEALTHCARE</text>
+  </g>
+</svg>

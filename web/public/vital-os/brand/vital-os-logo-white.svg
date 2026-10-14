@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 64" width="340" height="64" role="img" aria-label="Vital OS by Very Transparent Healthcare">
+  <title>Vital OS by Very Transparent Healthcare</title>
+  <defs>
+    <linearGradient id="vo-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#914BFA"/>
+      <stop offset="1" stop-color="#5C3FD0"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0 0) scale(1)">
+    <rect width="64" height="64" rx="17" fill="url(#vo-g)"/>
+    <path d="M10 38.5c3.5 0 5-9 8.5-9s1.5 10.5 5 10.5c2.6 0 3.1-4.6 5.5-4.6h3.5l4.5-16 5.5 26 4-12h5" fill="none" stroke="#FFFFFF" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="55.5" cy="33.4" r="3.3" fill="#FFFFFF"/>
+  </g>
+  <text x="78" y="37" font-family="Manrope, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF" letter-spacing="-0.6">Vital<tspan fill="#D8C8FF" dx="6">OS</tspan></text>
+  <text x="79" y="56" font-family="Manrope, 'Segoe UI', Arial, sans-serif" font-size="9" font-weight="700" fill="#D8C8FF" letter-spacing="2.6">BY VERYTRANSPARENT HEALTHCARE</text>
+</svg>
