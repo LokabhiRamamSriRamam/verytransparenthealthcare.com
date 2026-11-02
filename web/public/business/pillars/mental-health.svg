@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="Two people talking in a therapy session">
+  <title>Two people talking in a therapy session</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+    <!-- soft room -->
+    <circle cx="120" cy="96" r="62" fill="#F6F1FF"/>
+    <!-- left person, listening -->
+    <path d="M44 152 a28 28 0 0 1 56 0 Z" fill="#5C3FD0"/>
+    <circle cx="72" cy="88" r="18" fill="#E8B48E"/>
+    <path d="M55 86 a17 17 0 0 1 34 0 q-6 -14 -17 -14 t-17 14 Z" fill="#2E2520"/>
+    <!-- right person, speaking -->
+    <path d="M140 152 a28 28 0 0 1 56 0 Z" fill="#914BFA"/>
+    <circle cx="168" cy="88" r="18" fill="#F2C7A8"/>
+    <path d="M151 84 q4 -16 17 -16 t17 16 q-3 -4 -17 -4 t-17 4 Z" fill="#6B4A2F"/>
+    <!-- speech bubble between them -->
+    <path d="M100 48 h40 a10 10 0 0 1 10 10 v16 a10 10 0 0 1 -10 10 h-22 l-10 10 v-10 h-8 a10 10 0 0 1 -10 -10 v-16 a10 10 0 0 1 10 -10 Z" fill="#FFFFFF"/>
+    <circle cx="112" cy="66" r="3" fill="#914BFA"/>
+    <circle cx="122" cy="66" r="3" fill="#914BFA"/>
+    <circle cx="132" cy="66" r="3" fill="#914BFA"/>
+    <!-- calm heart -->
+    <path transform="translate(196 54) scale(1.1)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#F08A6C"/>
+    <path transform="translate(40 50) scale(0.95)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+  </g>
+</svg>

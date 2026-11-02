@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="One dashboard and one invoice, with no broker in between">
+  <title>One dashboard and one invoice, with no broker in between</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="19" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+    <!-- dashboard -->
+    <rect x="22" y="40" width="124" height="98" rx="12" fill="#FFFFFF"/>
+    <rect x="22" y="40" width="124" height="22" rx="11" fill="#5C3FD0"/>
+    <rect x="36" y="74" width="30" height="48" rx="7" fill="#EEE5FF"/>
+    <rect x="74" y="88" width="30" height="34" rx="7" fill="#D8C8FF"/>
+    <rect x="112" y="80" width="22" height="42" rx="7" fill="#914BFA"/>
+    <!-- single invoice -->
+    <path d="M160 48 h56 a10 10 0 0 1 10 10 v82 l-11 -8 l-11 8 l-11 -8 l-11 8 l-11 -8 l-11 8 V58 a10 10 0 0 1 10 -10 Z" fill="#FFFFFF"/>
+    <rect x="172" y="66" width="32" height="8" rx="4" fill="#191919"/>
+    <rect x="172" y="84" width="40" height="7" rx="3.5" fill="#EEE5FF"/>
+    <rect x="172" y="98" width="30" height="7" rx="3.5" fill="#EEE5FF"/>
+    <rect x="172" y="114" width="40" height="9" rx="4.5" fill="#5C3FD0"/>
+    <!-- "1" badge over the invoice -->
+    <circle cx="222" cy="46" r="15" fill="#4CAF6E"/>
+    <text x="222" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#FFFFFF">1</text>
+    <!-- struck-through broker -->
+    <circle cx="152" cy="158" r="13" fill="#EEE5FF"/>
+    <circle cx="152" cy="153" r="4.6" fill="#B3A4D8"/>
+    <path d="M145 166 a7 7 0 0 1 14 0 Z" fill="#B3A4D8"/>
+    <path d="M140 170 l24 -24" stroke="#E4573D" stroke-width="4" stroke-linecap="round"/>
+    <path transform="translate(22 158) scale(0.8)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+  </g>
+</svg>

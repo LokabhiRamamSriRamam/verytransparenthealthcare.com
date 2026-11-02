@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-label="A price tag and an itemised bill shown before booking, with no hidden costs">
+  <title>A price tag and an itemised bill shown before booking, with no hidden costs</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="3" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="5" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+    <!-- itemised bill -->
+    <path d="M78 42 h150 a14 14 0 0 1 14 14 v196 l-18 -12 l-18 12 l-18 -12 l-18 12 l-18 -12 l-18 12 l-18 -12 l-18 12 V56 a14 14 0 0 1 14 -14 Z" fill="#FFFFFF"/>
+    <rect x="98" y="72" width="78" height="12" rx="6" fill="#191919"/>
+    <!-- line items, each with a price -->
+    <rect x="98" y="104" width="62" height="9" rx="4.5" fill="#EEE5FF"/>
+    <rect x="186" y="104" width="34" height="9" rx="4.5" fill="#914BFA"/>
+    <rect x="98" y="128" width="74" height="9" rx="4.5" fill="#EEE5FF"/>
+    <rect x="186" y="128" width="34" height="9" rx="4.5" fill="#914BFA"/>
+    <rect x="98" y="152" width="54" height="9" rx="4.5" fill="#EEE5FF"/>
+    <rect x="186" y="152" width="34" height="9" rx="4.5" fill="#914BFA"/>
+    <path d="M98 178 h122" stroke="#D8C8FF" stroke-width="3" stroke-linecap="round"/>
+    <rect x="98" y="192" width="46" height="12" rx="6" fill="#191919"/>
+    <rect x="178" y="192" width="42" height="12" rx="6" fill="#5C3FD0"/>
+
+    <!-- price tag -->
+    <path d="M232 128 l72 -72 a16 16 0 0 1 22 0 l40 40 a16 16 0 0 1 0 22 l-72 72 a16 16 0 0 1 -22 0 l-40 -40 a16 16 0 0 1 0 -22 Z" fill="#5C3FD0"/>
+    <circle cx="316" cy="88" r="13" fill="#FFFFFF"/>
+    <circle cx="316" cy="88" r="5" fill="#5C3FD0"/>
+    <text x="292" y="162" text-anchor="middle" font-family="Georgia, serif" font-size="46" font-weight="700" fill="#FFFFFF" transform="rotate(-45 292 162)">₹</text>
+
+    <!-- confirmed tick -->
+    <circle cx="316" cy="226" r="26" fill="#4CAF6E"/>
+    <path d="M304.6 226.6 l8 8 l15 -16" stroke="#FFFFFF" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- petals -->
+    <path transform="translate(50 212) scale(1.4)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+    <path transform="translate(54 90) scale(1.1)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#F08A6C"/>
+  </g>
+</svg>

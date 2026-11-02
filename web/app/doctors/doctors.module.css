@@ -1,0 +1,171 @@
+/* Additions for /doctors. Layout and theming come from the shared care styles;
+   this adds the panel grid, the specialty strip and the vetting steps. */
+
+/* ============ The panel ============ */
+.panel {
+  margin: 36px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.doc {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 22px;
+  border-radius: 22px;
+  background: var(--white);
+  border: 1px solid rgba(25, 25, 25, 0.06);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.doc:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 44px -30px rgba(25, 25, 25, 0.5);
+}
+.docPortrait {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: linear-gradient(165deg, var(--bg-1) 0%, var(--bg-2) 100%);
+}
+.docName {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.docRole {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--purple);
+}
+.docMeta {
+  margin: 10px 0 0;
+  font-size: 0.88rem;
+  color: var(--ink-3);
+}
+.docTags {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+.docTags li {
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+/* ============ Specialties ============ */
+.specialties {
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 14px;
+}
+.specialty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  padding: 22px 16px;
+  border-radius: 20px;
+  background: var(--white);
+  border: 1px solid rgba(25, 25, 25, 0.06);
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.specialty:hover {
+  transform: translateY(-3px);
+  border-color: var(--purple-light);
+}
+.specialty:focus-visible {
+  outline: 3px solid var(--purple-light);
+  outline-offset: 3px;
+}
+.specialtyIcon {
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+.specialtyName {
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+.specialtyCount {
+  font-size: 0.85rem;
+  color: var(--ink-3);
+}
+
+/* ============ Vetting ============ */
+.vetting {
+  margin: 36px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  counter-reset: vet;
+}
+.vetStep {
+  padding: 24px 22px;
+  border-radius: 24px;
+  background: var(--cream);
+  counter-increment: vet;
+}
+.vetArt {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: -6px auto 10px;
+}
+.vetStep h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+.vetStep h3::before {
+  content: counter(vet) ". ";
+  color: var(--purple);
+}
+.vetStep p {
+  margin: 6px 0 0;
+  font-size: 0.95rem;
+  color: var(--ink-3);
+}
+
+/* ============ Join us band ============ */
+.join {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(24px, 5vw, 56px);
+  align-items: center;
+}
+.joinArt {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .join { grid-template-columns: minmax(0, 1fr); }
+}

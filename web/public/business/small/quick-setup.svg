@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="Team email addresses being added and invitations sent">
+  <title>Team email addresses being added and invitations sent</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="17" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+    <!-- input panel -->
+    <rect x="26" y="34" width="132" height="112" rx="14" fill="#FFFFFF"/>
+    <rect x="40" y="50" width="104" height="20" rx="10" fill="#EEE5FF"/>
+    <rect x="48" y="57" width="52" height="7" rx="3.5" fill="#914BFA"/>
+    <rect x="40" y="78" width="104" height="20" rx="10" fill="#EEE5FF"/>
+    <rect x="48" y="85" width="64" height="7" rx="3.5" fill="#914BFA"/>
+    <rect x="40" y="106" width="104" height="20" rx="10" fill="#EEE5FF"/>
+    <rect x="48" y="113" width="44" height="7" rx="3.5" fill="#914BFA"/>
+    <!-- send button -->
+    <rect x="40" y="134" width="60" height="4" rx="2" fill="#FFFFFF"/>
+    <!-- flying envelopes -->
+    <g>
+      <rect x="166" y="38" width="46" height="32" rx="6" fill="#5C3FD0"/>
+      <path d="M166 44 l23 16 l23 -16" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="182" y="84" width="46" height="32" rx="6" fill="#914BFA"/>
+      <path d="M182 90 l23 16 l23 -16" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <!-- motion lines -->
+    <path d="M152 56 h10 M148 70 h14 M158 100 h12" stroke="#D8C8FF" stroke-width="3.4" stroke-linecap="round"/>
+    <!-- done tick -->
+    <circle cx="200" cy="140" r="17" fill="#4CAF6E"/>
+    <path d="M192.6 140.4 l5 5 l9.4 -10" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path transform="translate(22 158) scale(0.85)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+  </g>
+</svg>

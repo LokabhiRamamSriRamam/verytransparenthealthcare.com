@@ -1,0 +1,366 @@
+/* Shared styling for the employer pages under /business/*.
+   Layout and theming come from the shared care styles; this adds the pieces
+   that only the business pages need — pricing tables, logo strips and metrics. */
+
+/* ============ Illustrated tiles ============ */
+.artTile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.art {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: -4px auto 14px;
+}
+
+/* ============ Logo strip ============ */
+.logos {
+  margin: 36px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 32px;
+}
+.logos li {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  color: var(--ink-3);
+  opacity: 0.75;
+}
+
+/* ============ Metric band ============ */
+.metrics {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.metric {
+  padding: 28px 24px;
+  border-radius: 24px;
+  background: var(--white);
+  border: 1px solid rgba(25, 25, 25, 0.06);
+  box-shadow: 0 20px 40px -32px rgba(25, 25, 25, 0.5);
+}
+.metricValue {
+  display: block;
+  font-size: clamp(2.1rem, 4vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.metricLabel {
+  display: block;
+  margin-top: 10px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.metricNote {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--ink-3);
+}
+
+/* ============ Pricing ============ */
+.tiers {
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+.tier {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 28px 26px;
+  border-radius: 26px;
+  background: var(--white);
+  border: 1px solid rgba(25, 25, 25, 0.08);
+}
+.tierFeatured {
+  border-color: transparent;
+  background: linear-gradient(160deg, var(--purple) 0%, var(--indigo) 100%);
+  color: var(--white);
+  box-shadow: 0 24px 50px -28px rgba(31, 48, 160, 0.7);
+}
+.tierTag {
+  align-self: flex-start;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--lavender);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+.tierFeatured .tierTag {
+  background: rgba(255, 255, 255, 0.18);
+  color: var(--white);
+}
+.tier h3 {
+  margin: 16px 0 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.price {
+  margin: 12px 0 0;
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.price span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink-3);
+}
+.tierFeatured .price span { color: rgba(255, 255, 255, 0.8); }
+.tier > p {
+  margin: 10px 0 0;
+  color: var(--ink-3);
+}
+.tierFeatured > p { color: rgba(255, 255, 255, 0.85); }
+.tierList {
+  margin: 20px 0 24px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  font-size: 0.97rem;
+  color: var(--ink-2);
+}
+.tierFeatured .tierList { color: rgba(255, 255, 255, 0.9); }
+.tierList li::before {
+  content: "✓";
+  margin-right: 8px;
+  font-weight: 800;
+  color: var(--purple);
+}
+.tierFeatured .tierList li::before { color: #D8C8FF; }
+.tierCta {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--purple);
+  color: var(--white);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.tierCta:hover { transform: translateY(-2px); }
+.tierFeatured .tierCta {
+  background: var(--white);
+  color: var(--purple);
+}
+.tierCta:focus-visible {
+  outline: 3px solid var(--purple-light);
+  outline-offset: 3px;
+}
+
+/* ============ Comparison table ============ */
+.tableWrap {
+  margin: 32px 0 0;
+  overflow-x: auto;
+  border-radius: 24px;
+  border: 1px solid rgba(25, 25, 25, 0.08);
+  background: var(--white);
+}
+.table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  text-align: left;
+}
+.table th,
+.table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(25, 25, 25, 0.07);
+  font-size: 0.97rem;
+}
+.table thead th {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.table tbody th {
+  font-weight: 700;
+  color: var(--ink);
+}
+.table tbody tr:last-child th,
+.table tbody tr:last-child td { border-bottom: 0; }
+.yes { font-weight: 800; color: var(--purple); }
+.no { color: var(--ink-3); }
+
+/* ============ Inline take-up chart ============ */
+.chartCard {
+  padding: clamp(24px, 4vw, 36px);
+  border-radius: 28px;
+  background: var(--white);
+  border: 1px solid rgba(25, 25, 25, 0.06);
+  box-shadow: 0 24px 50px -34px rgba(25, 25, 25, 0.45);
+}
+.chartTitle {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.chartNote {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+  color: var(--ink-3);
+}
+.chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 18px;
+  overflow: visible;
+}
+/* bars grow from the baseline when the card scrolls into view */
+.chartBar {
+  transform-box: fill-box;
+  transform-origin: bottom;
+  animation: growBar 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@keyframes growBar {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+.chartLabel {
+  font-size: 7px;
+  font-weight: 700;
+  fill: var(--ink-3);
+}
+.chartValue {
+  font-size: 9px;
+  font-weight: 800;
+  fill: var(--ink);
+}
+.chartLegend {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-size: 0.86rem;
+  color: var(--ink-3);
+}
+.chartLegend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  flex: none;
+}
+
+/* ============ Case study / quote card ============ */
+.caseCard {
+  padding: clamp(28px, 4vw, 44px);
+  border-radius: 28px;
+  background: var(--white);
+  border: 1px solid rgba(25, 25, 25, 0.06);
+  box-shadow: 0 24px 50px -34px rgba(25, 25, 25, 0.45);
+}
+.caseQuote {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+  line-height: 1.32;
+  color: var(--ink);
+}
+.caseBy {
+  margin: 18px 0 0;
+  font-size: 0.95rem;
+  color: var(--ink-3);
+}
+.caseBy strong {
+  display: block;
+  font-size: 1.02rem;
+  color: var(--ink);
+}
+
+/* ============ Contact form ============ */
+.form {
+  display: grid;
+  gap: 16px;
+  padding: clamp(26px, 4vw, 38px);
+  border-radius: 28px;
+  background: var(--white);
+  border: 1px solid rgba(25, 25, 25, 0.08);
+  box-shadow: 0 24px 50px -34px rgba(25, 25, 25, 0.45);
+}
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.field {
+  display: grid;
+  gap: 7px;
+}
+.field label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border-radius: 14px;
+  border: 1px solid rgba(25, 25, 25, 0.16);
+  background: var(--cream);
+  font: inherit;
+  font-size: 0.98rem;
+  color: var(--ink);
+}
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  outline: 3px solid var(--purple-light);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+.formNote {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--ink-3);
+}
+
+@media (max-width: 760px) {
+  .formRow { grid-template-columns: minmax(0, 1fr); }
+}

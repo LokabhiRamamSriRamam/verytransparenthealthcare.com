@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-label="A dashboard showing rising take-up and falling waiting times">
+  <title>A dashboard showing rising take-up and falling waiting times</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="6" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="5" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+    <!-- main panel -->
+    <rect x="40" y="46" width="250" height="200" rx="20" fill="#FFFFFF"/>
+    <rect x="40" y="46" width="250" height="34" rx="17" fill="#5C3FD0"/>
+    <circle cx="60" cy="63" r="5" fill="#FFFFFF" opacity="0.6"/>
+    <rect x="76" y="59" width="70" height="8" rx="4" fill="#FFFFFF" opacity="0.8"/>
+
+    <!-- rising area chart -->
+    <path d="M66 206 L108 182 L150 188 L192 148 L234 126 L266 104 L266 212 L66 212 Z" fill="#EEE5FF"/>
+    <path d="M66 206 L108 182 L150 188 L192 148 L234 126 L266 104"
+          stroke="#914BFA" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="266" cy="104" r="8" fill="#5C3FD0"/>
+    <circle cx="266" cy="104" r="3.4" fill="#FFFFFF"/>
+    <!-- axis -->
+    <path d="M66 212 h200" stroke="#D8C8FF" stroke-width="3" stroke-linecap="round"/>
+    <rect x="66" y="224" width="24" height="7" rx="3.5" fill="#EEE5FF"/>
+    <rect x="106" y="224" width="24" height="7" rx="3.5" fill="#EEE5FF"/>
+    <rect x="146" y="224" width="24" height="7" rx="3.5" fill="#EEE5FF"/>
+    <rect x="186" y="224" width="24" height="7" rx="3.5" fill="#EEE5FF"/>
+    <rect x="226" y="224" width="24" height="7" rx="3.5" fill="#EEE5FF"/>
+
+    <!-- floating stat card: take-up up -->
+    <rect x="236" y="30" width="128" height="74" rx="18" fill="#FFFFFF"/>
+    <circle cx="266" cy="67" r="17" fill="#4CAF6E"/>
+    <path d="M266 75 v-15 m0 0 l-6 6 m6 -6 l6 6" stroke="#FFFFFF" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="292" y="52" width="52" height="12" rx="6" fill="#191919"/>
+    <rect x="292" y="72" width="38" height="8" rx="4" fill="#EEE5FF"/>
+
+    <!-- floating stat card: wait down -->
+    <rect x="252" y="186" width="124" height="74" rx="18" fill="#FFFFFF"/>
+    <circle cx="282" cy="223" r="17" fill="#914BFA"/>
+    <path d="M282 215 v15 m0 0 l-6 -6 m6 6 l6 -6" stroke="#FFFFFF" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="308" y="208" width="52" height="12" rx="6" fill="#191919"/>
+    <rect x="308" y="228" width="40" height="8" rx="4" fill="#EEE5FF"/>
+
+    <!-- petals -->
+    <path transform="translate(28 128) scale(1.3)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+    <path transform="translate(52 266) scale(1.0)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#F08A6C"/>
+  </g>
+</svg>

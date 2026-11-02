@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="A single appointment ticket with its price shown">
+  <title>A single appointment ticket with its price shown</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+    <!-- ticket with a notch -->
+    <path d="M34 46 h172 a12 12 0 0 1 12 12 v22 a14 14 0 0 0 0 28 v22 a12 12 0 0 1 -12 12 H34 a12 12 0 0 1 -12 -12 v-22 a14 14 0 0 0 0 -28 V58 a12 12 0 0 1 12 -12 Z" fill="#FFFFFF"/>
+    <path d="M150 50 v80" stroke="#D8C8FF" stroke-width="3" stroke-dasharray="7 7" stroke-linecap="round"/>
+    <!-- doctor glyph -->
+    <circle cx="66" cy="80" r="16" fill="#E8B48E"/>
+    <path d="M50 78 q3 -15 16 -15 t16 15 q-5 -5 -16 -5 t-16 5 Z" fill="#2E2520"/>
+    <path d="M44 124 a22 22 0 0 1 44 0 Z" fill="#5C3FD0"/>
+    <!-- appointment detail lines -->
+    <rect x="98" y="66" width="40" height="9" rx="4.5" fill="#191919"/>
+    <rect x="98" y="84" width="34" height="8" rx="4" fill="#EEE5FF"/>
+    <rect x="98" y="100" width="28" height="8" rx="4" fill="#EEE5FF"/>
+    <!-- price -->
+    <text x="184" y="94" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#5C3FD0">₹</text>
+    <rect x="166" y="104" width="36" height="8" rx="4" fill="#914BFA"/>
+    <!-- "1" badge -->
+    <circle cx="208" cy="40" r="17" fill="#4CAF6E"/>
+    <text x="208" y="48" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#FFFFFF">1</text>
+    <path transform="translate(24 150) scale(0.9)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+  </g>
+</svg>

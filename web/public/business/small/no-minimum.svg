@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="Two people covered by the same care badge as a large team">
+  <title>Two people covered by the same care badge as a large team</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+    <!-- arc of cover -->
+    <path d="M28 128 a92 92 0 0 1 184 0 Z" fill="#EEE5FF"/>
+    <path d="M28 128 a92 92 0 0 1 184 0" stroke="#914BFA" stroke-width="4.4" fill="none" stroke-linecap="round"/>
+    <circle cx="120" cy="40" r="17" fill="#5C3FD0"/>
+    <path d="M120 31 v18 M111 40 h18" stroke="#FFFFFF" stroke-width="4.4" stroke-linecap="round"/>
+    <!-- two people -->
+    <path d="M58 164 a26 26 0 0 1 52 0 Z" fill="#914BFA"/>
+    <circle cx="84" cy="100" r="18" fill="#E8B48E"/>
+    <path d="M67 98 q3 -17 17 -17 t17 17 q-5 -6 -17 -6 t-17 6 Z" fill="#2E2520"/>
+    <path d="M130 164 a26 26 0 0 1 52 0 Z" fill="#5C3FD0"/>
+    <circle cx="156" cy="100" r="18" fill="#F2C7A8"/>
+    <path d="M139 100 q0 -19 17 -19 t17 19 q-4 -9 -17 -9 t-17 9 Z" fill="#7A4B2A"/>
+    <path transform="translate(26 70) scale(0.9)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+    <path transform="translate(216 84) scale(0.85)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#F08A6C"/>
+  </g>
+</svg>

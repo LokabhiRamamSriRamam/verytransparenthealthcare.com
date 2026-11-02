@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="A same-day route to a clinician, with a hand reaching out in support">
+  <title>A same-day route to a clinician, with a hand reaching out in support</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="15" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+    <circle cx="120" cy="92" r="64" fill="#FFF3EE"/>
+    <!-- two hands meeting -->
+    <path d="M38 118 q22 -26 48 -16 l24 10 a9 9 0 0 1 -6 17 l-18 -6 q10 6 16 10 a9 9 0 0 1 -8 16 l-30 -14 q-16 -8 -26 -17 Z" fill="#E8B48E"/>
+    <path d="M202 118 q-22 -26 -48 -16 l-24 10 a9 9 0 0 0 6 17 l18 -6 q-10 6 -16 10 a9 9 0 0 0 8 16 l30 -14 q16 -8 26 -17 Z" fill="#F2C7A8"/>
+    <!-- supportive heart above -->
+    <path transform="translate(120 56) scale(1.8)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#E4573D"/>
+    <!-- 24h badge -->
+    <circle cx="196" cy="44" r="21" fill="#5C3FD0"/>
+    <path d="M196 32 v12 l8 6" stroke="#FFFFFF" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path transform="translate(32 48) scale(0.9)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+  </g>
+</svg>

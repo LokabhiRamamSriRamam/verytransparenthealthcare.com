@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-label="Two colleagues outside a small shopfront with a care badge above the door">
+  <title>Two colleagues outside a small shopfront with a care badge above the door</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="12" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="5" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+    <!-- shopfront -->
+    <rect x="70" y="80" width="260" height="188" rx="16" fill="#FFFFFF"/>
+    <path d="M60 84 h280 l-16 -30 H76 Z" fill="#5C3FD0"/>
+    <!-- awning stripes -->
+    <path d="M76 54 h40 l-10 30 H60 Z" fill="#914BFA"/>
+    <path d="M156 54 h40 l-10 30 h-40 Z" fill="#914BFA"/>
+    <path d="M236 54 h40 l-10 30 h-40 Z" fill="#914BFA"/>
+    <!-- window -->
+    <rect x="92" y="106" width="92" height="78" rx="10" fill="#EEE5FF"/>
+    <path d="M138 106 v78 M92 145 h92" stroke="#FFFFFF" stroke-width="4"/>
+    <!-- door -->
+    <rect x="212" y="134" width="74" height="134" rx="10" fill="#D8C8FF"/>
+    <circle cx="226" cy="202" r="5" fill="#5C3FD0"/>
+    <!-- care badge above the door -->
+    <circle cx="249" cy="112" r="20" fill="#4CAF6E"/>
+    <path d="M249 101 v22 M238 112 h22" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- two people -->
+    <path d="M86 268 a28 28 0 0 1 56 0 Z" fill="#914BFA"/>
+    <circle cx="114" cy="200" r="19" fill="#E8B48E"/>
+    <path d="M96 198 q3 -18 18 -18 t18 18 q-5 -6 -18 -6 t-18 6 Z" fill="#2E2520"/>
+
+    <path d="M144 268 a28 28 0 0 1 56 0 Z" fill="#5C3FD0"/>
+    <circle cx="172" cy="206" r="19" fill="#F2C7A8"/>
+    <path d="M154 206 q0 -21 18 -21 t18 21 q-4 -10 -18 -10 t-18 10 Z" fill="#7A4B2A"/>
+
+    <!-- small "2" badge -->
+    <circle cx="330" cy="92" r="24" fill="#FFFFFF"/>
+    <text x="330" y="102" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#5C3FD0">2</text>
+
+    <!-- petals -->
+    <path transform="translate(44 150) scale(1.3)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+    <path transform="translate(356 196) scale(1.1)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#F08A6C"/>
+  </g>
+</svg>

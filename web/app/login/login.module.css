@@ -1,0 +1,342 @@
+/* Standalone auth page: a centred card on the left, reassurance panel on the right.
+   It deliberately does not reuse the marketing page rhythm. */
+
+.page {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  background: var(--cream);
+}
+
+/* ============ Form side ============ */
+.formSide {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(24px, 4vw, 44px);
+}
+.brand {
+  display: inline-block;
+  text-decoration: none;
+}
+.formInner {
+  width: 100%;
+  max-width: 440px;
+  margin: auto;
+  padding: clamp(24px, 4vw, 16px) 0;
+}
+.title {
+  margin: 0;
+  font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.sub {
+  margin: 12px 0 0;
+  color: var(--ink-3);
+}
+
+/* Sign in / sign up switch, built from radios so it works without JS */
+.switch {
+  margin: 28px 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--lavender);
+}
+.switchInput {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.switchLabel {
+  padding: 11px 16px;
+  border-radius: 999px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.96rem;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.switchInput:checked + .switchLabel {
+  background: var(--white);
+  color: var(--purple);
+  box-shadow: 0 6px 14px -8px rgba(25, 25, 25, 0.5);
+}
+.switchInput:focus-visible + .switchLabel {
+  outline: 3px solid var(--purple-light);
+  outline-offset: 2px;
+}
+
+/* The sign-up-only fields appear when the sign-up radio is checked */
+.signupOnly {
+  display: none;
+}
+.page:has(#mode-signup:checked) .signupOnly {
+  display: grid;
+}
+.page:has(#mode-signup:checked) .signinOnly {
+  display: none;
+}
+.page:has(#mode-signup:checked) .submitLabel::after {
+  content: "Create account";
+}
+.page:has(#mode-signin:checked) .submitLabel::after {
+  content: "Sign in";
+}
+
+.form {
+  margin: 26px 0 0;
+  display: grid;
+  gap: 16px;
+}
+.field {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+}
+.field label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+.field input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(25, 25, 25, 0.16);
+  background: var(--white);
+  font: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+}
+.field input:focus-visible {
+  outline: 3px solid var(--purple-light);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+.hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--ink-3);
+}
+
+.submit {
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 30px;
+  border: 0;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
+  color: var(--white);
+  box-shadow: 0 10px 24px -10px rgba(92, 63, 208, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px -12px rgba(92, 63, 208, 0.7);
+}
+.submit:focus-visible {
+  outline: 3px solid var(--purple-light);
+  outline-offset: 3px;
+}
+
+.forgot {
+  justify-self: start;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--purple);
+}
+
+/* Divider and alternative sign-in */
+.or {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 26px 0;
+  font-size: 0.85rem;
+  color: var(--ink-3);
+}
+.or::before,
+.or::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(25, 25, 25, 0.12);
+}
+.alts {
+  display: grid;
+  gap: 10px;
+}
+.alt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(25, 25, 25, 0.16);
+  background: var(--white);
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.alt:hover {
+  border-color: var(--purple-light);
+  transform: translateY(-1px);
+}
+.alt:focus-visible {
+  outline: 3px solid var(--purple-light);
+  outline-offset: 2px;
+}
+
+.legal {
+  margin: 24px 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-3);
+}
+.legal a { color: var(--purple); font-weight: 600; }
+
+.doctorsNote {
+  margin: 18px 0 0;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: var(--lavender);
+  font-size: 0.9rem;
+  color: var(--ink-2);
+}
+.doctorsNote a { color: var(--purple); font-weight: 700; }
+
+/* ============ Reassurance side ============ */
+.aside {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+  padding: clamp(32px, 5vw, 64px);
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(160deg, var(--purple) 0%, var(--indigo) 100%);
+  color: var(--white);
+}
+.asideGlow {
+  position: absolute;
+  left: 50%;
+  bottom: -30%;
+  width: 120%;
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(145, 75, 250, 0.55) 0%, transparent 62%);
+  z-index: -1;
+}
+.asideTitle {
+  margin: 0;
+  max-width: 18ch;
+  font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -0.025em;
+}
+.asideTitle em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  color: #D8C8FF;
+}
+.asideList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 18px;
+  max-width: 34rem;
+}
+.asideList li {
+  padding-left: 34px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.86);
+}
+.asideList strong {
+  display: block;
+  color: var(--white);
+}
+.asideList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #D8C8FF;
+}
+/* Decorative care petals drawn inline in the aside */
+.asideArt {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+.petalSpin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: petalSpin 26s linear infinite;
+}
+@keyframes petalSpin {
+  to { transform: rotate(360deg); }
+}
+.pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulse 3.4s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(1.08); opacity: 0.9; }
+}
+
+.asideQuote {
+  margin: 0;
+  padding-left: 20px;
+  border-left: 3px solid rgba(216, 200, 255, 0.6);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  color: var(--white);
+}
+.asideQuote footer {
+  margin-top: 10px;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ============ Small screens ============ */
+@media (max-width: 900px) {
+  .page { grid-template-columns: minmax(0, 1fr); }
+  .aside { order: 2; }
+}

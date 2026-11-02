@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="A care package box holding several included visits and tests under one price">
+  <title>A care package box holding several included visits and tests under one price</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="10" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+    <!-- box body -->
+    <path d="M44 72 h152 v74 a12 12 0 0 1 -12 12 H56 a12 12 0 0 1 -12 -12 Z" fill="#914BFA"/>
+    <!-- lid -->
+    <rect x="34" y="52" width="172" height="26" rx="9" fill="#5C3FD0"/>
+    <!-- ribbon -->
+    <rect x="110" y="52" width="20" height="106" fill="#D8C8FF"/>
+    <!-- included items peeking out -->
+    <g>
+      <rect x="56" y="30" width="38" height="26" rx="7" fill="#FFFFFF"/>
+      <circle cx="68" cy="43" r="5.5" fill="#4CAF6E"/>
+      <rect x="78" y="39" width="10" height="7" rx="3.5" fill="#EEE5FF"/>
+
+      <rect x="146" y="26" width="38" height="30" rx="7" fill="#FFFFFF"/>
+      <path d="M160 48 v-14 m-7 7 h14" stroke="#F08A6C" stroke-width="3.6" stroke-linecap="round"/>
+
+      <rect x="100" y="16" width="40" height="40" rx="9" fill="#FFFFFF"/>
+      <path d="M120 26 v20 M110 36 h20" stroke="#5C3FD0" stroke-width="4.6" stroke-linecap="round"/>
+    </g>
+    <!-- one price label -->
+    <rect x="76" y="106" width="88" height="30" rx="15" fill="#FFFFFF"/>
+    <text x="104" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#5C3FD0">₹</text>
+    <rect x="118" y="116" width="34" height="9" rx="4.5" fill="#191919"/>
+    <path transform="translate(218 118) scale(0.9)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#F08A6C"/>
+    <path transform="translate(24 108) scale(0.9)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+  </g>
+</svg>

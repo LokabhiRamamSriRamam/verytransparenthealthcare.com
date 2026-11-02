@@ -1,0 +1,128 @@
+/* Shared styling for the plain-text legal pages (/privacy, /terms).
+   Deliberately simple: one readable column, no marketing furniture. */
+
+.page {
+  padding: clamp(24px, 5vh, 56px) 0 clamp(48px, 8vh, 88px);
+}
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.crumbs {
+  margin: 0 0 18px;
+  font-size: 0.9rem;
+  color: var(--ink-3);
+}
+.crumbs a { text-decoration: none; }
+.crumbs a:hover { color: var(--purple); text-decoration: underline; }
+
+.label {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+.title {
+  margin: 10px 0 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.updated {
+  margin: 14px 0 0;
+  font-size: 0.92rem;
+  color: var(--ink-3);
+}
+.lede {
+  margin: 22px 0 0;
+  font-size: 1.1rem;
+  color: var(--ink-3);
+}
+
+/* A short plain-language summary above the detail */
+.summary {
+  margin: 32px 0 0;
+  padding: 26px 28px;
+  border-radius: 24px;
+  background: var(--lavender);
+}
+.summary h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.summary ul {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+.summary li {
+  position: relative;
+  padding-left: 26px;
+  color: var(--ink-2);
+}
+.summary li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  font-weight: 800;
+  color: var(--purple);
+}
+
+/* Table of contents */
+.toc {
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  font-size: 0.97rem;
+}
+.toc a { color: var(--purple); font-weight: 600; }
+
+.body h2 {
+  margin: 44px 0 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  scroll-margin-top: 24px;
+}
+.body h3 {
+  margin: 26px 0 0;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+.body p {
+  margin: 12px 0 0;
+  color: var(--ink-2);
+}
+.body ul,
+.body ol {
+  margin: 12px 0 0;
+  padding-left: 22px;
+  color: var(--ink-2);
+}
+.body li { margin: 6px 0 0; }
+.body a { color: var(--purple); font-weight: 600; }
+
+.contact {
+  margin: 44px 0 0;
+  padding: 26px 28px;
+  border-radius: 24px;
+  background: var(--white);
+  border: 1px solid rgba(25, 25, 25, 0.08);
+}
+.contact h2 { margin: 0; }
+.contact p { margin: 10px 0 0; color: var(--ink-3); }
+
+@media (max-width: 760px) {
+  .wrap { padding: 0 16px; }
+}

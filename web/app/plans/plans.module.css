@@ -1,0 +1,155 @@
+/* Additions for /plans. Layout and theming come from the shared care styles;
+   this adds the membership cards and the add-on price list. */
+
+/* Illustrated "three ways to pay" tiles */
+.artTile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.art {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: -4px auto 14px;
+}
+
+.tiers {
+  margin: 36px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+.tier {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 30px 28px;
+  border-radius: 28px;
+  background: var(--white);
+  border: 1px solid rgba(25, 25, 25, 0.08);
+}
+.tierFeatured {
+  border-color: transparent;
+  background: linear-gradient(160deg, var(--purple) 0%, var(--indigo) 100%);
+  color: var(--white);
+  box-shadow: 0 24px 50px -28px rgba(31, 48, 160, 0.7);
+}
+.tierTag {
+  align-self: flex-start;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--lavender);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+.tierFeatured .tierTag {
+  background: rgba(255, 255, 255, 0.18);
+  color: var(--white);
+}
+.tier h3 {
+  margin: 16px 0 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.price {
+  margin: 14px 0 0;
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.price span {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink-3);
+}
+.tierFeatured .price span { color: rgba(255, 255, 255, 0.8); }
+.tierFor {
+  margin: 12px 0 0;
+  color: var(--ink-3);
+}
+.tierFeatured .tierFor { color: rgba(255, 255, 255, 0.85); }
+.tierList {
+  margin: 22px 0 26px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  font-size: 0.97rem;
+  color: var(--ink-2);
+}
+.tierFeatured .tierList { color: rgba(255, 255, 255, 0.9); }
+.tierList li::before {
+  content: "✓";
+  margin-right: 8px;
+  font-weight: 800;
+  color: var(--purple);
+}
+.tierFeatured .tierList li::before { color: #D8C8FF; }
+.tierCta {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--purple);
+  color: var(--white);
+  transition: transform 0.2s ease;
+}
+.tierCta:hover { transform: translateY(-2px); }
+.tierFeatured .tierCta {
+  background: var(--white);
+  color: var(--purple);
+}
+.tierCta:focus-visible {
+  outline: 3px solid var(--purple-light);
+  outline-offset: 3px;
+}
+
+/* ============ Pay-as-you-go price list ============ */
+.priceList {
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+}
+.priceItem {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: var(--white);
+  border: 1px solid rgba(25, 25, 25, 0.07);
+}
+.priceItem strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+.priceItem span {
+  flex: none;
+  font-weight: 800;
+  color: var(--purple);
+}
+.priceItem small {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.87rem;
+  font-weight: 400;
+  color: var(--ink-3);
+}

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="A family membership card covering several people all year">
+  <title>A family membership card covering several people all year</title>
+  <defs>
+    <filter id="gouache" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="14" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.55 0 0 0 1.2" result="grainAlpha"/>
+      <feComposite in="rough" in2="grainAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#gouache)">
+    <!-- back card -->
+    <rect x="44" y="40" width="156" height="92" rx="16" fill="#D8C8FF" transform="rotate(-7 122 86)"/>
+    <!-- front card -->
+    <rect x="36" y="56" width="168" height="98" rx="16" fill="#5C3FD0"/>
+    <!-- chip -->
+    <rect x="54" y="78" width="26" height="20" rx="5" fill="#FFD79A"/>
+    <path d="M54 88 h26 M67 78 v20" stroke="#C9922F" stroke-width="2"/>
+    <!-- member avatars -->
+    <circle cx="106" cy="88" r="12" fill="#F2C7A8"/>
+    <circle cx="128" cy="88" r="12" fill="#E8B48E"/>
+    <circle cx="150" cy="88" r="12" fill="#C68B5E"/>
+    <circle cx="172" cy="88" r="12" fill="#FFFFFF"/>
+    <path d="M172 81 v14 M165 88 h14" stroke="#5C3FD0" stroke-width="3.4" stroke-linecap="round"/>
+    <!-- card lines -->
+    <rect x="54" y="118" width="64" height="9" rx="4.5" fill="#FFFFFF" opacity="0.9"/>
+    <rect x="54" y="134" width="40" height="7" rx="3.5" fill="#FFFFFF" opacity="0.6"/>
+    <!-- unlimited / all-year badge -->
+    <circle cx="196" cy="48" r="22" fill="#4CAF6E"/>
+    <path d="M188 48 a5 5 0 0 1 10 0 a5 5 0 0 0 10 0 a5 5 0 0 0 -10 0 a5 5 0 0 1 -10 0 Z" fill="none" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round"/>
+    <path transform="translate(26 134) scale(0.95)" d="M0 8 C -14 -2 -16 -12 -9 -16 C -4 -19 -1 -15 0 -12 C 1 -15 4 -19 9 -16 C 16 -12 14 -2 0 8 Z" fill="#F08A6C"/>
+    <path transform="translate(26 44) scale(0.85)" d="M0 -8 C 1 -2 2 -1 8 0 C 2 1 1 2 0 8 C -1 2 -2 1 -8 0 C -2 -1 -1 -2 0 -8 Z" fill="#FFB59E"/>
+  </g>
+</svg>
